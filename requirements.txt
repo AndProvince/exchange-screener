@@ -1,0 +1,3 @@
+pandas~=1.5.3
+aiogram~=2.25
+dydx-v3-python~=2.0.1

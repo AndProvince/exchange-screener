@@ -1,13 +1,11 @@
 import asyncio
-
 from dydx3.constants import MARKET_BTC_USD, MARKET_ETH_USD
 from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.dispatcher.filters.builtin import CommandStart
 from aiogram.utils import executor
-import time
-
 from config import TOKEN
+
 from utils.scaner_candles import Scaner
 
 bot = Bot(TOKEN)

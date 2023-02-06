@@ -1,0 +1,6 @@
+version: '2.15.1'
+
+services:
+  bot:
+    container_name: exch_screener_bot
+    build: .
