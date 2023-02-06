@@ -46,6 +46,7 @@ async def scan_vma(message: types.Message, scaner: Scaner):
         # Take new VMA values
         vma8 = scaner.vma(8)
         vma20 = scaner.vma(20)
+        print(scaner.market, vma8, vma20)
         # Condition to buy token
         if vma8 > vma20 and last_vma8:
             if last_vma8 < last_vma20:
@@ -54,6 +55,8 @@ async def scan_vma(message: types.Message, scaner: Scaner):
         if vma8 < vma20 and last_vma20:
             if last_vma8 > last_vma20:
                 await message.answer(f"{scaner.market} need to sell by VMA")
+        last_vma8 = vma8
+        last_vma20 = vma20
         # Sleep for defuse call frequency
         await asyncio.sleep(150)
 
